@@ -2,3 +2,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body ::-webkit-scrollbar {
+  @apply w-1 h-1;
+}
+
+body ::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-sm;
+}
+body ::-webkit-scrollbar-track {
+  @apply bg-gray-200 rounded-sm;
+}
+
+input[type="range"]{
+  direction: ltr;
+}

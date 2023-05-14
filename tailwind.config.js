@@ -4,10 +4,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Vazir'],
+        sans: ["Vazir"],
+      },
+      colors: {
+        bgColor: '#f3f4f6',
+        mainOrange: '#ea580c',
+        textColor: '#334155',
       },
     },
   },
-  plugins: [],
-}
-
+  plugins: [
+    require('@tailwindcss/forms'),
+    // ...
+  ],
+};
