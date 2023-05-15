@@ -17,3 +17,21 @@ body ::-webkit-scrollbar-track {
 input[type="range"]{
   direction: ltr;
 }
+
+input[type="range"]::-webkit-slider-thumb{
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  background-color: #ea580c;
+}
+input[type="range"]::-moz-range-thumb{
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  border: none;
+  pointer-events: auto;
+  -moz-appearance: none;
+  background-color: #ea580c;
+}

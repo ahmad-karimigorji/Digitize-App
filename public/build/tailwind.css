@@ -611,6 +611,9 @@ select{
   border-color: transparent;
   background-color: currentColor;
 }
+.pointer-events-none{
+  pointer-events: none;
+}
 .fixed{
   position: fixed;
 }
@@ -622,6 +625,12 @@ select{
 }
 .sticky{
   position: sticky;
+}
+.-top-0{
+  top: -0px;
+}
+.-top-0\.5{
+  top: -0.125rem;
 }
 .bottom-0{
   bottom: 0px;
@@ -637,6 +646,9 @@ select{
 }
 .right-2\.5{
   right: 0.625rem;
+}
+.top-0{
+  top: 0px;
 }
 .top-1{
   top: 0.25rem;
@@ -705,6 +717,9 @@ select{
 .mt-11{
   margin-top: 2.75rem;
 }
+.mt-2{
+  margin-top: 0.5rem;
+}
 .block{
   display: block;
 }
@@ -716,6 +731,12 @@ select{
 }
 .hidden{
   display: none;
+}
+.h-0{
+  height: 0px;
+}
+.h-0\.5{
+  height: 0.125rem;
 }
 .h-1{
   height: 0.25rem;
@@ -787,6 +808,11 @@ select{
 .cursor-pointer{
   cursor: pointer;
 }
+.appearance-none{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
@@ -795,6 +821,9 @@ select{
 }
 .grid-rows-\[55px_minmax\(500px\2c _1fr\)\]{
   grid-template-rows: 55px minmax(500px, 1fr);
+}
+.flex-row-reverse{
+  flex-direction: row-reverse;
 }
 .flex-col{
   flex-direction: column;
@@ -837,6 +866,9 @@ select{
 }
 .gap-y-9{
   row-gap: 2.25rem;
+}
+.overflow-hidden{
+  overflow: hidden;
 }
 .overflow-y-auto{
   overflow-y: auto;
@@ -991,6 +1023,10 @@ select{
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .pb-28{
   padding-bottom: 7rem;
 }
@@ -1002,6 +1038,9 @@ select{
 }
 .pr-2\.5{
   padding-right: 0.625rem;
+}
+.pt-4{
+  padding-top: 1rem;
 }
 .text-center{
   text-align: center;
@@ -1095,42 +1134,52 @@ input[type="range"]{
   direction: ltr;
 }
 
+input[type="range"]::-webkit-slider-thumb{
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  background-color: #ea580c;
+}
+input[type="range"]::-moz-range-thumb{
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  border: none;
+  pointer-events: auto;
+  -moz-appearance: none;
+  background-color: #ea580c;
+}
 .placeholder\:text-xs::-moz-placeholder{
   font-size: 0.75rem;
   line-height: 1rem;
 }
-
 .placeholder\:text-xs::placeholder{
   font-size: 0.75rem;
   line-height: 1rem;
 }
-
 .hover\:bg-gray-50:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-
 .focus\:shadow-none:focus{
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-
 .focus\:ring-0:focus{
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-
 .focus\:ring-mainOrange:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(234 88 12 / var(--tw-ring-opacity));
 }
-
 .peer\/like:checked ~ .peer-checked\/like\:fill-mainOrange{
   fill: #ea580c;
 }
-
 @media (min-width: 768px){
   .md\:col-span-8{
     grid-column: span 8 / span 8;
@@ -1158,7 +1207,6 @@ input[type="range"]{
     line-height: 1.5rem;
   }
 }
-
 @media (min-width: 1024px){
   .lg\:col-span-3{
     grid-column: span 3 / span 3;

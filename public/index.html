@@ -523,20 +523,37 @@
                 </span>
               </div>
               <!-- content -->
-              <div x-show="priceTab" class="px-2 text-textColor">
-                <label
-                  for="rangePrice"
-                  class="w-full p-2 flex items-center cursor-pointer rounded-sm hover:bg-gray-50"
-                >
+              <div x-show="priceTab" class="px-2 pt-4 text-textColor">
+                
+                  <div class="relative w-full h-0.5 bg-gray-200 rounded-md overflow-hidden">
+                    <div class="absolute top-0 bg-mainOrange h-0.5 left-0 right-0" id="progress"></div>
+                  </div>
+                  <div class="relative">
+                    <input
+                    type="range"
+                    name="price"
+                    class="w-full h-0.5 text-mainOrange rounded-sm focus:ring-mainOrange border-textColor absolute appearance-none pointer-events-none bg-transparent -top-0.5 left-0"
+                    min="0"
+                    max="1000"
+                    step="100"
+                    value="0"
+                    id="minPrice"
+                  />
                   <input
                     type="range"
                     name="price"
-                    class="w-full text-mainOrange rounded-sm focus:ring-mainOrange border-textColor"
+                    class="w-full h-0.5 text-mainOrange rounded-sm focus:ring-mainOrange border-textColor absolute appearance-none pointer-events-none bg-transparent -top-0.5 left-0"
                     min="0"
-                    max="500"
-                    id="rangePrice"
+                    max="1000"
+                    step="100"
+                    value="1000"
+                    id="maxPrice"
                   />
-                </label>
+                  </div>
+                  <div class="w-full flex flex-row-reverse items-center justify-between px-1 py-3 text-textColor">
+                    <span id="minVal">0</span>
+                    <span id="maxVal">400</span>
+                  </div>
               </div>
             </div>
           </div>
@@ -854,6 +871,11 @@
         </button>
       </div>
     </div>
+
+
+
+    <script src="../src/js/app.js"></script>
+
   </body>
   <script
     defer
