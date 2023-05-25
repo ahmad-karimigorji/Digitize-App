@@ -86,9 +86,9 @@
     <!-- desktop navBar -->
     <header class="bg-white mb-6">
       <div
-        class="max-w-screen-xl hidden mb-6 md:flex items-center justify-between py-2 px-4 mx-auto"
+        class="max-w-screen-xl hidden mb-6 md:flex items-center justify-between py-2 px-4 mx-auto gap-x-2"
       >
-        <nav>
+        <nav class="flex items-center justify-between flex-auto">
           <ul x-data="{navBarLink: 1}" class="flex items-center">
             <li>
               <a href="#" class="block text-textColor"
@@ -114,8 +114,8 @@
               <a
                 @click="navBarLink = 1"
                 :class="navBarLink === 1 ? 'font-bold' : '' "
-                href="#"
-                class="block text-textColor lg:text-xl py-4 px-4 lg:px-6"
+                href="index.html"
+                class="block text-textColor lg:text-xl py-4 px-2.5 lg:px-5"
                 >خانه</a
               >
             </li>
@@ -124,7 +124,7 @@
                 @click="navBarLink = 2"
                 :class="navBarLink === 2 ? 'font-bold' : '' "
                 href="#"
-                class="block text-textColor lg:text-xl py-4 px-4 lg:px-6"
+                class="block text-textColor lg:text-xl py-4 px-2.5 lg:px-5"
                 >تلفن همراه</a
               >
             </li>
@@ -133,7 +133,7 @@
                 @click="navBarLink = 3"
                 :class="navBarLink === 3 ? 'font-bold' : '' "
                 href="#"
-                class="block text-textColor lg:text-xl py-4 px-4 lg:px-6"
+                class="block text-textColor lg:text-xl py-4 px-2.5 lg:px-5"
                 >لپتاپ</a
               >
             </li>
@@ -142,11 +142,26 @@
                 @click="navBarLink = 4"
                 :class="navBarLink === 4 ? 'font-bold' : '' "
                 href="#"
-                class="block text-textColor lg:text-xl py-4 px-4 lg:px-6"
+                class="block text-textColor lg:text-xl py-4 px-2.5 lg:px-5"
                 >ساعت هوشمند</a
               >
             </li>
           </ul>
+          <a href="cart.html" class="block">
+            <span class="text-textColor">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="34"
+                fill="currentColor"
+                class="scale-[.85]"
+              >
+                <path
+                  d="M28.277 12.693c-.95-1.048-2.38-1.657-4.364-1.87V9.747a6.9 6.9 0 0 0-2.266-5.114c-1.46-1.332-3.358-1.955-5.327-1.771-3.386.326-6.233 3.598-6.233 7.14v.821c-1.984.213-3.415.822-4.364 1.87-1.374 1.53-1.331 3.57-1.176 4.987l.992 7.89c.298 2.763 1.417 5.597 7.508 5.597h7.905c6.092 0 7.211-2.834 7.509-5.582l.992-7.92c.155-1.402.184-3.442-1.176-4.972ZM16.518 4.831c1.417-.128 2.763.312 3.811 1.26a4.925 4.925 0 0 1 1.615 3.656v.991h-9.888v-.736c0-2.522 2.082-4.944 4.462-5.171Zm-4.59 13.798h-.014a1.42 1.42 0 0 1-1.416-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.418 1.416Zm9.917 0h-.014a1.42 1.42 0 0 1-1.417-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.417 1.416Z"
+                />
+              </svg>
+            </span>
+          </a>
         </nav>
         <label
           for="searchBar"
@@ -960,12 +975,15 @@
     </div>
 
     <!-- add to cart btn -->
-    <div class="md:hidden bg-white fixed bottom-0 left-0 right-0 rounded-t-md shadow-[0_-4px_8px_0_rgba(0,_0,_0,_0.1)]">
-      <div class="w-full flex items-center justify-between gap-x-4 mx-auto sm:w-4/5 sm:text-lg py-2.5 px-4"
+    <div
+      class="md:hidden bg-white fixed bottom-0 left-0 right-0 rounded-t-md shadow-[0_-4px_8px_0_rgba(0,_0,_0,_0.1)]"
+    >
+      <div
+        class="w-full flex items-center justify-between gap-x-4 mx-auto sm:w-4/5 sm:text-lg py-2.5 px-4"
       >
-      <button class="bg-mainOrange grow text-white rounded-md py-3">
-        اضافه به سبد خرید
-      </button>
+        <button class="bg-mainOrange grow text-white rounded-md py-3">
+          اضافه به سبد خرید
+        </button>
         <span>28,865,000 تومان</span>
       </div>
     </div>
